@@ -1,0 +1,134 @@
+/* ------------------------------
+   GOOGLE REVIEWS SECTION
+--------------------------------*/
+.reviews_main {
+  padding: 20px 0;
+}
+.google-review-carousel-container h2 {
+ font-size: 2.3rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  background: linear-gradient(45deg, #400c70, #5a189a, #ff007f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.google-review-card {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.google-review-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+/* ------------------------------
+   MEDIA BOX
+--------------------------------*/
+.google-media-box {
+    margin: 0 auto;
+  width: 30%;
+  height: 100px;
+  background: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.google-media-content {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.google-no-media {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* ------------------------------
+   CONTENT BOX
+--------------------------------*/
+.google-content-box {
+  padding: 18px;
+}
+
+.google-reviewer-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 6px;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+}
+
+.google-review-text {
+    min-height: 5vh;
+    max-height: 8vh;
+    overflow-y: auto;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #444;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 12px;
+  font-style: italic;
+  width: 100%;
+  
+  white-space: normal !important;   /* 🔥 Forces text to wrap */
+  overflow-wrap: break-word !important;
+}
+
+
+/* ------------------------------
+   STARS
+--------------------------------*/
+.google-rating-stars {
+  font-size: 1.2rem;
+  color: #ffb400;
+  letter-spacing: 2px;
+}
+
+/* ------------------------------
+   ANIMATION
+--------------------------------*/
+.google-review-card {
+  animation: fadeIn 0.6s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ------------------------------
+   RESPONSIVE
+--------------------------------*/
+@media (max-width: 768px) {
+  .google-media-box {
+    height: 220px;
+  }
+
+  .google-reviewer-name {
+    font-size: 1.1rem;
+  }
+
+  .google-review-text {
+    font-size: 0.9rem;
+  }
+}

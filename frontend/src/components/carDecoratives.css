@@ -1,0 +1,192 @@
+/* ==========================================================
+   MAIN SECTION  (REFERENCE MATCHED)
+========================================================== */
+.car_main {
+  position: relative;
+  padding: 20px 24px;
+  background: linear-gradient(120deg, #ffe5ea, #fff0f3, #ffecef);
+  background-size: 300% 300%;
+  animation: bgMove 14s ease infinite;
+  border-radius: 0 0 32px 32px;
+
+  /* Decorative white dots */
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.25) 25%, transparent 26%),
+    radial-gradient(circle, rgba(255,255,255,0.18) 20%, transparent 22%),
+    radial-gradient(circle, rgba(255,255,255,0.35) 18%, transparent 20%);
+  background-size: 50px 50px, 70px 70px, 60px 60px;
+  background-position: 0 0, 20px 30px, 10px 60px;
+}
+
+/* Decorative snowflake shape */
+.car_main::after {
+  content: "";
+  position: absolute;
+  right: -60px;
+  bottom: -60px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 6px solid rgba(255, 255, 255, 0.6);
+  clip-path: polygon(
+    50% 0%, 60% 25%, 100% 25%, 70% 50%,
+    100% 75%, 60% 75%, 50% 100%, 40% 75%,
+    0% 75%, 30% 50%, 0% 25%, 40% 25%
+  );
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+/* ==========================================================
+   TITLE
+========================================================== */
+.car_main h2 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-family: ui-monospace;
+  font-weight: 700;
+  background: linear-gradient(18deg, #40166d 45%, #ff0080 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+/* ==========================================================
+   CARD
+========================================================== */
+.car-premium-card {
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 18px;
+  background: #ffffff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 20px rgba(242, 53, 84, 0.16);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.car-premium-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(242, 53, 84, 0.28);
+}
+
+/* ==========================================================
+   MEDIA AREA
+========================================================== */
+.car-media-box {
+  width: 100%;
+  height: 200px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff2f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.car-media-content {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.car-premium-card:hover .car-media-content {
+  transform: scale(1.08);
+}
+
+.car-no-media {
+  width: 100%;
+  height: 100%;
+  background: #f6f6f6;
+  color: #777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+.car-content-box {
+  text-align: center;
+  padding: 12px 6px 4px;
+}
+
+.car-product-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2a2a2a;
+  margin-bottom: 6px;
+  font-family: "Poppins", sans-serif;
+}
+
+.car-product-category {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.car-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #f23554;
+}
+
+.car-original {
+  font-size: 0.92rem;
+  color: #888;
+  text-decoration: line-through;
+  margin-left: 6px;
+}
+
+/* ==========================================================
+   TABLET
+========================================================== */
+@media (max-width: 768px) {
+  .car_main {
+    padding: 36px 16px;
+  }
+
+  .car-media-box {
+    height: 180px;
+  }
+}
+
+/* ==========================================================
+   MOBILE — CLEAN LIKE OFFER
+========================================================== */
+@media (max-width: 576px) {
+  .car_main {
+    padding: 30px 10px;
+  }
+
+  .car_main .row > * {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .car-premium-card {
+    padding: 8px;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .car-media-box {
+    height: 135px;
+    border-radius: 14px;
+  }
+
+  .car-product-title {
+    font-size: 0.88rem;
+  }
+
+  .car-price {
+    font-size: 1rem;
+  }
+
+  .car-original {
+    font-size: 1rem;
+  }
+}

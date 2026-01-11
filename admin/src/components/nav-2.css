@@ -1,0 +1,50 @@
+/* nav-2.css */
+.navbar-container {
+  background-color: #400c70;
+  padding: 0.5rem 1.5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: top 0.3s ease;
+  color: white;
+}
+
+.navbar-logo {
+  height: 50px;
+  width: auto;
+}
+
+.notification-wrapper {
+  position: relative;
+}
+
+.notification-bell {
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+.logout-btn {
+  background-color: #666;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}

@@ -1,0 +1,321 @@
+/* Base Grid Layout */
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  justify-items: center;
+}
+
+/* Card Container */
+.collection-card-item {
+  width: 100%;
+  display: flex;
+  min-width: 220px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.collection-card-wrapper {
+  width: 295px;
+  height: 440px;
+  background: rgb(249, 247, 247);
+  border: 2px solid #505050;
+  border-radius: 10px;
+  overflow: hidden;
+  transform: scale(0.95);
+  transition: box-shadow 0.5s, transform 0.5s;
+}
+
+.collection-card-wrapper:hover {
+  transform: scale(1);
+  box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.collection-card-container {
+  width: 100%;
+  height: 100%;
+}
+
+/* Image Section */
+.collection-card-top {
+  height: 340px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collection-card-top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Bottom Slider */
+.collection-card-bottom {
+  width: 200%;
+  height: 22%;
+  display: flex;
+  transition: transform 0.5s;
+}
+
+.collection-card-bottom.clicked {
+  transform: translateX(-50%);
+}
+
+/* Left Section */
+.collection-card-left {
+  width: 50%;
+  background: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: auto;
+}
+
+.collection-card-details {
+  font-size: 16px;
+  font-weight: 500;
+  width: 70%;
+}
+
+.collection-card-name {
+  margin: 0;
+  font-weight: 600;
+  color: #16142c;
+}
+
+.collection-card-price {
+  margin: 5px 0 0;
+  color: #16142c;
+}
+
+/* Buy Button */
+.collection-card-buy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  height: 100%;
+  background: #400c70;
+  border-left: 1px solid #ddd;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  border-radius: 0 0 8px 0;
+}
+
+.collection-card-buy svg {
+  color: #fff;
+  font-size: 20px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.collection-card-buy:hover {
+  background-color: #f5f1fa;
+  transform: scale(1.05);
+}
+
+.collection-card-buy:hover svg {
+  color: #db8631;
+  transform: translateY(3px);
+}
+
+/* Done Icon */
+.collection-card-done {
+  font-size: 30px;
+  color: #400c70;
+}
+
+/* Description Overlay */
+.collection-card-overlay {
+  position: absolute;
+  top: -70px;
+  right: -70px;
+  width: 140px;
+  height: 140px;
+  background: #400c70;
+  border-radius: 0 0 200px 200px;
+  transition: all 0.5s ease, border-radius 2s ease, top 1s ease;
+  z-index: 9;
+  overflow: hidden;
+}
+
+.collection-card-icon {
+  position: absolute;
+  top: 85px;
+  right: 85px;
+  color: white;
+  font-size: 20px;
+}
+
+.collection-card-description {
+  padding: 5%;
+  opacity: 0;
+  transform: translateY(-200%);
+  transition: opacity 0.3s ease, transform 0.8s ease;
+  color: white;
+  font-size: 13px;
+}
+
+.collection-card-overlay:hover {
+  width: 100%;
+  height: 80%;
+  top: 0;
+  right: 0;
+  border-radius: 0;
+}
+
+.collection-card-overlay:hover .collection-card-icon {
+  opacity: 0;
+  top: 15px;
+  right: 15px;
+}
+
+.collection-card-overlay:hover .collection-card-description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Responsive Media Queries ===== */
+
+/* Small screens (phones) */
+@media (max-width: 640px) {
+  .collection-grid {
+    margin-top: 100px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0rem;
+     padding: 0rem;
+     /* margin: 0 auto; */
+    
+  }
+.collection-card-item {
+  width: 95%;
+
+  min-width: 180px;
+  
+}
+  .collection-card-wrapper {
+    width: 92%;
+    height: 310px;
+  }
+
+  .collection-card-top {
+    height: 240px;
+  }
+
+  .collection-card-details {
+    font-size: 14px;
+  }
+
+  .collection-card-price {
+    margin: 5px 0 0;
+    font-size: 13px;
+  }
+
+  .collection-card-name {
+    font-size: xx-small;
+  }
+
+  .collection-card-description {
+    font-size: 12px;
+  }
+  .collection-grid {
+   z-index: 0;
+  }
+  .collection-card-done{
+  font-size: 20px;
+padding: 20px;
+  margin-bottom: 10px;
+}
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .collection-grid {
+    margin-top: 100px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+.collection_Card_right h1 {
+ font-size: 14px;
+}
+  .collection-card-wrapper {
+    width: 280px;
+    height: 340px;
+  }
+
+  .collection-card-top {
+    height: 260px;
+  }
+
+  .collection-card-details {
+    font-size: 15px;
+  }
+
+  .collection-card-price {
+    font-size: 14px;
+  }
+
+  .collection-card-name {
+    font-size: 15px;
+  }
+}
+
+/* Large screens (desktops) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .collection-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .collection-card-wrapper {
+    width: 290px;
+    height: 430px;
+  }
+}
+
+/* Extra large screens (HD+) */
+@media (min-width: 1441px) {
+  .collection-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .collection-card-wrapper {
+    width: 295px;
+    height: 440px;
+  }
+}
+.collection_Card_right {
+  width: 50%;
+  background: #400c70;
+  color: white;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.collection-card-done{
+  font-size: 30px;
+padding: 20px;
+  margin-bottom: 10px;
+}
+
+.collection-card-done svg {
+  color: white;
+}
+.collection-card-icon {
+  position: absolute;
+  top: 85px;
+  right: 85px;
+  color: white;
+  font-size: 20px;
+  animation: blink 3s infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}

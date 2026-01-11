@@ -1,0 +1,190 @@
+/* ===============================
+   GLOBAL SECTION
+================================ */
+.epic-about {
+  width: 100%;
+  background: linear-gradient(180deg, #fff, #f8f9fc);
+  overflow-x: hidden;
+  font-family:"ui-monospace";
+}
+
+/* ===============================
+   HERO SECTION
+================================ */
+.epic-about__hero {
+  min-height: 50vh;
+  background: linear-gradient(135deg, #400c70, #ff007f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.epic-about__hero h1 {
+  color: #ffffff;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.epic-about__highlight {
+  color: #ffd700;
+}
+
+/* ===============================
+   CONTENT WRAPPER
+================================ */
+.epic-about__features {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+/* ===============================
+   ABOUT TEXT
+================================ */
+.epic_about_text h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #400c70;
+}
+
+.epic_about_text p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* ===============================
+   KEYWORD LINKS
+================================ */
+.keyword-links {
+  margin-top: 30px;
+}
+
+.keyword-links h3 {
+  font-size: 1.1rem;
+  color: #400c70;
+  margin-bottom: 10px;
+}
+
+.keyword-links ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.keyword-link {
+  background: #f3f4f6;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  
+  color: #400c70;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.keyword-link:hover {
+  background: #400c70;
+  color: #fff;
+}
+
+/* ===============================
+   FEATURE CARDS
+================================ */
+.card-fuctures {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;               /* ✅ allow wrapping */
+  justify-content: center;
+  align-items: stretch;
+  height: 50vh;
+}
+
+/* Each card */
+.card-fuctures_item {
+  width: calc(50% - 15px);       /* ✅ 2 cards per row */
+  max-width: 380px;              /* optional – keeps it neat */
+}
+
+
+.card-fuctures_item {
+
+  border-radius: 20px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  height: 30vh;
+}
+
+.card-fuctures_item:hover {
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* ICONS */
+.card-fuctures_item svg {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+/* ICON COLORS */
+.card-icon-1 { color: #ff007f; }
+.card-icon-2 { color: #ffd700; }
+.card-icon-3 { color: #400c70; }
+.card-icon-4 { color: #00b894; }
+
+.card-fuctures_quantity {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.card-fuctures_text {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .epic-about__features {
+    grid-template-columns: 1fr;
+  }
+
+  .card-fuctures {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .epic-about__hero {
+    min-height: 40vh;
+  }
+
+  .card-fuctures {
+    grid-template-columns: 1fr;
+  }
+
+  .epic_about_text h1 {
+    font-size: 1.8rem;
+  }
+
+  .epic_about_text p {
+    font-size: 0.95rem;
+  }
+}

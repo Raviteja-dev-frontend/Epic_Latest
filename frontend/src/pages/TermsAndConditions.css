@@ -1,0 +1,37 @@
+.terms-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px 30px;
+  background-color: #f9f9fb;
+  color: #333;
+  font-family: "ui-monospace";
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.terms-container h2 {
+  font-size: 28px;
+  color: #400c70;
+  margin-bottom: 20px;
+  
+}
+
+.terms-container h3 {
+  font-size: 20px;
+  color: #5a189a;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.terms-container p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.last-updated {
+  margin-top: 30px;
+  font-size: 13px;
+  color: #777;
+  text-align: right;
+}

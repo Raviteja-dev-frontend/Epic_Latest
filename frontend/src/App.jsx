@@ -19,7 +19,7 @@ import TermsAndConditions from "./pages/TermsAndConditions";
 import KeywordList from "./pages/KeywordList";
 import KeywordPage from "./pages/KeywordPage";
 import GoogleReviews from "./components/GoogleReviews";
-import SendOrderMail from "./components/SendOrderMail";
+import SendOrderMail from "./components/sendOrderMail";
 
 // Components
 import Navbar from "./components/Navbar";

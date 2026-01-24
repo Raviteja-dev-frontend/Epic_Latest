@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 
 const AdminLogin = ({ setToken }) => {
   const navigate = useNavigate();
-  const backendUrl = "http://localhost:4000"; // backend URL
-
+//  const backendUrl = import.meta.env.VITE_BACKEND_URL || ""; // backend URL
+  const backendUrl = import.meta.env.VITE_BACKEND_URL;
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);

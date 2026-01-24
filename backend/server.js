@@ -65,6 +65,12 @@ app.use('/api', limiter);
 
 app.use(express.json());
 
+app.post("/api/test", (req, res) => {
+  console.log("BODY:", req.body);
+  res.json({ ok: true });
+});
+
+
 // API Routes
 app.use("/api/user", userRouter);
 app.use('/api/product', productRouter);

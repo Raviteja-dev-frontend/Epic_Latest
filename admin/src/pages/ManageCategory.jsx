@@ -2,8 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
-const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:4000';
-
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 const ManageCategory = () => {
   const [name, setName] = useState('');
   const [categories, setCategories] = useState([]);
